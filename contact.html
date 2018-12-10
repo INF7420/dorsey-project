@@ -8,6 +8,7 @@
   <title>Dorsey Graduate e-Portfolio</title>
   <link rel="stylesheet" href=" https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/0.5.0/modern-normalize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Alegreya+Sans" rel="stylesheet">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
   <link rel="stylesheet" href="styles.css">
 </head>
 
@@ -17,21 +18,52 @@
     <nav class="navigation">
       <ul>
         <li><a href="index.html">HOME</a></li>
-        <li><a href="aboutme.html">ABOUT ME</a></li>
         <li><a href="education.html">EDUCATION</a></li>
+        <li><a href="aboutme.html">ABOUT ME</a></li>
         <li><a href="contact.html" class="active">CONTACT</a></li>
       </ul>
     </nav>
-    <h1 class="intros">Contact</h1>
+    <h1 class="intros">Questions</h1>
   </header>
 
   <main class="maincontainer">
     <img id="photo1" src="images/dorseyphoto.jpg" alt="Professional Head Photo of Deborah Dorsey">
+
+    <p id="questions">
+      I appreciate the time you have spend reviewing my e-portfolio. If you have questions regarding my studies, please provide your contact information.
+    </p>
+
+    <form id="form" action="https://formspree.io/ab0183@wayne.edu" method="POST" class="validate">
+      <div>
+
+        <label class="labels" for="name">  Name <i class="glyphicon glyphicon-user">
+          </i> </label>
+        <input class="form-input" type="text" name="name" placeholder="First and Last Name" required >
+      </div>
+
+      <div>
+        <label class="labels" for="email">  E-mail <i class="glyphicon glyphicon-envelope"> </i> </label>
+        <input class="form-input" type="email" name="email" placeholder="email@example.edu" required>
+      </div>
+
+      <div>
+        <label class="labels" for="message"> Message <i class="glyphicon glyphicon-pencil"> </i> </label>
+
+        <textarea class="form-input" id="message" name="message" placeholder="Your questions or comments" required></textarea>
+      </div>
+
+      <div class="button">
+        <button type="submit">Send</button>
+      </div>
+
+      <input type="hidden" name="_next" value="https://inf7420.github.io/dorsey-project//thanks.html" />
+    </form>
   </main>
+
   <footer class="footer">
     <p>&copy: 2018 Deborah Dorsey</p>
   </footer>
-
+  <script src="scripts.js"></script>
 </body>
 
 </html>
